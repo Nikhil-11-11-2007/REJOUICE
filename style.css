@@ -1,7 +1,7 @@
 @font-face {
     font-family: "rejouice";
     src: url(./SuisseIntl-Light.ttf) format('woff2');
-    font-weight: 100;
+    font-weight: 700;
 }
 
 @font-face {
@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "rejouice";
+    /* font-family: "rejouice"; */
 }
 
 html,body{
@@ -123,6 +123,7 @@ nav{
     transform: translate(-50%,50%);
     z-index: 3;
     display: flex;
+    scale: 0;
     gap: 1vw;
 }
 
@@ -172,14 +173,15 @@ nav{
 
 .page3 .content{
     margin-top: 9vh;
-    height: 60vh;
+    height: 65vh;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;  
-    border-top: 1px solid #fff;
+    border-top: 1px solid #404040;
     color: #fff;
     padding-top: 2vw;
+    font-family: "rejouice";
 }
 
 .content #right{
@@ -189,7 +191,6 @@ nav{
 
 
 #right p{
-    font-family: "rejo";
     font-size: 1.3vw;
 }
 
@@ -209,12 +210,11 @@ nav{
     font-size: 1.3vw;
     margin-left: -1vw;
     cursor: pointer;
-    font-family: "rejo";
 }
 
 #right #btn h4:hover{
     margin-left: 0vw;
-    transition: all ease .5s;
+    transition: all ease .6s;
 }
 
 #right span {
@@ -222,4 +222,101 @@ nav{
     width: 75%;
     line-height: 1;
     overflow: hidden;
+}
+
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#000;;
+    padding: 1vw 2.5vw;
+    margin-top: -.1vh;
+}
+
+.page4 #highlight{
+    font-family: "rejouice";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 1.4vw;
+    color: #fff;
+}
+
+#butn{
+    margin-top: 3vh;
+    width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 1vh;
+}
+
+#butn h4{
+    font-size: 1.3vw;
+    margin-left: -.9vw;
+    cursor: pointer;
+}
+
+#butn h4:hover{
+    margin-left: .4vw;
+    transition: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.page4 .container1{
+    height: 120vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.box1{
+    height: 110vh;
+    width: 90%;
+    background-color: transparent;
+    position: absolute;
+    top: 5vh;
+    left: 5%;
+}
+
+#box-cursor{
+    height: 50vh;
+    width: 20vw;
+    background-color: #f9f7;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    scale: 0;
+}
+
+.container1 img{
+    height: 100%;
+    width: 100%;
+}
+
+.page4 .container2{
+    height: 120vh;
+    width: 100%;
+    margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2 #img-left{
+    height: 100%;
+    width: 49.3%;
+}
+
+#img-left img{
+    height: 100%;
+    width: 100%;
+}
+
+.container2 #img-right{
+    height: 100%;
+    width: 49.3%;
+}
+
+#img-right img{
+    height: 100%;
+    width: 100%;
 }

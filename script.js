@@ -83,8 +83,8 @@ gsap.from(".page3 span p ", {
     trigger: ".page3",
     scroller: "#main",
     // markers: true,
-    start: "top 60%",
-    end: "top 58%",
+    start: "top 55%",
+    end: "top 45%",
     scrub: 2
   }
 });
@@ -116,3 +116,32 @@ gsap.from("h1 span", {
 }
 
 stunningWords()
+
+function boxcursorAnimation(){
+  let container1 = document.querySelector(".container1")
+let boxCursor = document.querySelector("#box-cursor")
+
+container1.addEventListener("mousemove", function(detail){
+  let rectt = container1.getBoundingClientRect()
+  gsap.to(boxCursor,{
+    x: detail.clientX - rectt.left,
+    y: detail.clientY - rectt.top
+  })
+})
+
+container1.addEventListener("mouseenter", function(){
+  gsap.to(boxCursor, {
+    scale: 1,
+    opacity: 1
+  });
+});
+
+container1.addEventListener("mouseleave", function(){
+  gsap.to(boxCursor, {
+    scale: 0,
+    opacity: 0
+  });
+});
+}
+
+boxcursorAnimation()
