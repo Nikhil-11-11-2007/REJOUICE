@@ -82,7 +82,6 @@ gsap.from(".page3 span p ", {
   scrollTrigger: {
     trigger: ".page3",
     scroller: "#main",
-    // markers: true,
     start: "top 55%",
     end: "top 45%",
     scrub: 2
@@ -120,6 +119,7 @@ stunningWords()
 function boxcursorAnimation(){
   let container1 = document.querySelector(".container1")
 let boxCursor = document.querySelector("#box-cursor")
+let boxh5 = document.querySelector("#box-cursor h5")
 
 container1.addEventListener("mousemove", function(detail){
   let rectt = container1.getBoundingClientRect()
@@ -127,10 +127,20 @@ container1.addEventListener("mousemove", function(detail){
     x: detail.clientX - rectt.left,
     y: detail.clientY - rectt.top
   })
+
+  gsap.to(boxh5,{
+    x: detail.clientX - rectt.left - "0vw",
+    y: detail.clientY - rectt.top -  "0vw"
+  })
 })
 
 container1.addEventListener("mouseenter", function(){
   gsap.to(boxCursor, {
+    scale: 1,
+    opacity: 1
+  });
+
+  gsap.to(boxh5, {
     scale: 1,
     opacity: 1
   });
@@ -141,7 +151,103 @@ container1.addEventListener("mouseleave", function(){
     scale: 0,
     opacity: 0
   });
+
+  gsap.to(boxh5, {
+    scale: 0,
+    opacity: 0
+  });
 });
 }
 
 boxcursorAnimation()
+
+function box2cursorAnimation(){
+  let imgLeft = document.querySelector("#img-left")
+let box2Cursor = document.querySelector("#box2-cursor")
+let box2h5 = document.querySelector("#box2-cursor h5")
+
+imgLeft.addEventListener("mousemove", function(Detail){
+  let recT = imgLeft.getBoundingClientRect()
+  gsap.to(box2Cursor,{
+    x: Detail.clientX - recT.left,
+    y: Detail.clientY - recT.top
+  })
+
+  gsap.to(box2h5,{
+    x: Detail.clientX - recT.left - "0vw",
+    y: Detail.clientY - recT.top -  "0vw"
+  })
+})
+
+imgLeft.addEventListener("mouseenter", function(){
+  gsap.to(box2Cursor, {
+    scale: 1,
+    opacity: 1
+  });
+
+  gsap.to(box2h5, {
+    scale: 1,
+    opacity: 1
+  });
+});
+
+imgLeft.addEventListener("mouseleave", function(){
+  gsap.to(box2Cursor, {
+    scale: 0,
+    opacity: 0
+  });
+
+  gsap.to(box2h5, {
+    scale: 0,
+    opacity: 0
+  });
+});
+}
+
+box2cursorAnimation()
+
+
+function box3cursorAnimation(){
+  let imgRight = document.querySelector("#img-right")
+let box3Cursor = document.querySelector("#box3-cursor")
+let box3h5 = document.querySelector("#box3-cursor h5")
+
+imgRight.addEventListener("mousemove", function(Detail){
+  let recT = imgRight.getBoundingClientRect()
+  gsap.to(box3Cursor,{
+    x: Detail.clientX - recT.left,
+    y: Detail.clientY - recT.top
+  })
+
+  gsap.to(box3h5,{
+    x: Detail.clientX - recT.left - "0vw",
+    y: Detail.clientY - recT.top -  "0vw"
+  })
+})
+
+imgRight.addEventListener("mouseenter", function(){
+  gsap.to(box3Cursor, {
+    scale: 1,
+    opacity: 1
+  });
+
+  gsap.to(box3h5, {
+    scale: 1,
+    opacity: 1
+  });
+});
+
+imgRight.addEventListener("mouseleave", function(){
+  gsap.to(box3Cursor, {
+    scale: 0,
+    opacity: 0
+  });
+
+  gsap.to(box3h5, {
+    scale: 0,
+    opacity: 0
+  });
+});
+}
+
+box3cursorAnimation()

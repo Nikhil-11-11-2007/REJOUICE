@@ -9,11 +9,17 @@
     src: url(./SuisseIntl-Regular.woff2) format('woff2');
     font-weight: 300;
 }
+
+@font-face {
+    font-family: "rejou";
+    src: url(./SuisseIntl-Regular.woff2) format('woff2');
+    font-weight: 600;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "rejouice"; */
 }
 
 html,body{
@@ -33,7 +39,7 @@ html,body{
     height: 90vh;
     width: 100%;
     position: relative;
-    background-color: #111;
+    background-color: #000000;
     z-index: 3;
     color: #fff;
     display: flex;
@@ -48,10 +54,10 @@ html,body{
 }
 
 .page1-content h1{
-    font-family: "rejo";
-    font-size: 26vw;
+    font-family: "rejou";
+    font-size: 25vw;
     overflow: hidden;
-    margin-top: -10vh;
+    margin-top: 2vh;
 }
 
 h1 span{
@@ -77,9 +83,20 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 2.5vw;
+    background-color: transparent;
     text-transform: capitalize;
-    font-family: "rejouice";
+    font-family: "rejou";
+    position: fixed;
+    z-index: 9;
+    color: #fff;
+}
 
+nav h3{
+    font-size: .9vw;
+}
+
+nav > h4{
+    font-size: .9vw;
 }
 
 #nav-center{
@@ -268,23 +285,40 @@ nav{
     overflow: hidden;
 }
 
+
 .box1{
-    height: 110vh;
-    width: 90%;
+    height: 120vh;
+    width: 100%;
     background-color: transparent;
     position: absolute;
-    top: 5vh;
-    left: 5%;
+    top: 0;
+}
+
+.box1:hover{
+    background: linear-gradient(rgba(22, 22, 22, 0.518),rgba(0, 0, 0, 0.644));
 }
 
 #box-cursor{
     height: 50vh;
     width: 20vw;
-    background-color: #f9f7;
     position: absolute;
     z-index: 2;
     top: 0;
     scale: 0;
+}
+
+#box-cursor h5{
+    position: inherit;
+    top: -2vw;
+    font-family: "rejo";
+    color: #fff;
+    margin-left: 3vw;
+}
+
+#box-cursor video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .container1 img{
@@ -299,11 +333,14 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .container2 #img-left{
     height: 100%;
     width: 49.3%;
+    position: relative;
+    overflow: hidden;
 }
 
 #img-left img{
@@ -314,9 +351,79 @@ nav{
 .container2 #img-right{
     height: 100%;
     width: 49.3%;
+    position: relative;
+    overflow: hidden;
 }
 
 #img-right img{
     height: 100%;
     width: 100%;
 }
+
+.box2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.box2:hover{
+    background: linear-gradient(rgba(22, 22, 22, 0.518),rgba(0, 0, 0, 0.644));
+}
+
+#box2-cursor{
+    height: 50vh;
+    width: 20vw;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    scale: 0;
+}
+
+#box2-cursor h5{
+    position: inherit;
+    top: -2vw;
+    font-family: "rejo";
+    color: #fff;
+}
+
+#box2-cursor video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box3{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.box3:hover{
+    background: linear-gradient(rgba(22, 22, 22, 0.518),rgba(0, 0, 0, 0.644));
+}
+
+
+#box3-cursor{
+    height: 50vh;
+    width: 20vw;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    scale: 0;
+}
+
+#box3-cursor h5{
+    position: inherit;
+    top: -2vw;
+    font-family: "rejo";
+    color: #fff;
+    margin-left: 8vw;
+}
+
+#box3-cursor video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+} 
