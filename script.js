@@ -251,3 +251,15 @@ imgRight.addEventListener("mouseleave", function(){
 }
 
 box3cursorAnimation()
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  speed:20000,
+  autoplay: {
+    delay: 500,
+    disableOnInteraction: true,
+  },
+});
