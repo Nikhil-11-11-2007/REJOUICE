@@ -252,8 +252,8 @@ imgRight.addEventListener("mouseleave", function(){
 
 box3cursorAnimation()
 
-
-var swiper = new Swiper(".mySwiper", {
+function swiperAnimation(){
+  var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -263,3 +263,25 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: true,
   },
 });
+}
+
+swiperAnimation()
+
+
+let page6 = document.querySelector(".page6")
+let page6cont = document.querySelector(".page6-cont")
+
+page6.addEventListener("mouseenter", function(){
+  gsap.to(page6cont,{
+    scale: 1,
+    duration: 1,
+    scrollTrigger:{
+      trigger:".page6 .page6-cont",
+      scroller: "#main",
+      markers:true,
+      start: "top 80%",
+      end: "top 20%",
+      scrub:true
+    }
+  })
+})

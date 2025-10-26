@@ -20,11 +20,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "rejou";
 }
 
 html,body{
     height: 100%;
     width: 100%;
+}
+
+html{
+    font-size: clamp(14px,1vw,20px);
 }
 
 .page1{
@@ -88,7 +93,7 @@ nav{
     font-family: "rejou";
     position: fixed;
     z-index: 9;
-    color: #fff;
+    color: #ffffff;
 }
 
 nav h3{
@@ -99,6 +104,7 @@ nav > h4{
     font-size: .9vw;
 }
 
+
 #nav-center{
     width: 15vw;
     display: flex;
@@ -108,6 +114,11 @@ nav > h4{
     font-size: .9vw;
     margin-left: 8vw;
     cursor: pointer;
+}
+
+#nav-center h4:nth-child(1){
+    font-family: "rejo";
+    color: #404040;
 }
 
 .page2{
@@ -494,3 +505,64 @@ nav > h4{
     margin-left: auto;
     margin-right: auto;
 }
+
+.page6{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 2vw;
+}
+
+.page6-top{
+    height: 78vh;
+    width: 100%;
+    padding-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.page6-top h1{
+    font-size: 4.1rem;
+    font-family: "rejouice";
+    margin-bottom: 6vw;
+}
+
+.page6-content{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2.5vh 0vw;
+    border-top: 1px solid #171616;
+}
+
+.page6-text {
+    width: 50%;
+    height: 100%;
+}
+
+.page6-text h2{
+    font-size: 1.3rem;
+    font-family: "rejouice";
+    width: 30%;
+}
+
+.para-div{
+    height: 100%;
+    width: 50%;   
+}
+
+.para-div p{
+    font-size: 1.3rem;
+    font-family: "rejouice";
+    width: 50%;
+}
+
+.page6-cont{
+    height: 120vh;
+    width: 100%;
+    /* background-color: darkolivegreen; */
+    scale: .5;
+}
+
+
