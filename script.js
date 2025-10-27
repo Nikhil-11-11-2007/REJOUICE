@@ -267,21 +267,26 @@ function swiperAnimation(){
 
 swiperAnimation()
 
-
-let page6 = document.querySelector(".page6")
+function page6Animation(){
+  
+  let page6 = document.querySelector(".page6")
 let page6cont = document.querySelector(".page6-cont")
 
 page6.addEventListener("mouseenter", function(){
   gsap.to(page6cont,{
     scale: 1,
-    duration: 1,
+    duration: 10,
+    ease: "power4.inout",
     scrollTrigger:{
       trigger:".page6 .page6-cont",
       scroller: "#main",
-      markers:true,
+      // markers:true,
       start: "top 80%",
       end: "top 20%",
       scrub:true
     }
   })
 })
+}
+
+page6Animation()
