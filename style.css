@@ -578,9 +578,8 @@ nav > h4{
 }
 
 .page7-center{
-    background-color: red;
-    width: 26.16vw;
-    height: 10vh;
+    width: 34.16vw;
+    height: 12vh;
     position: relative;
     text-align: center;
     display: flex;
@@ -590,17 +589,17 @@ nav > h4{
 
 .page7-center h2{
     font-family: "rejouice";
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .page7-center h3{
     font-family: "rejouice";
     top: 10vh;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .page7-center:hover h2{
-    margin-top: -10vh;
+    margin-top: -13vh;
     transition: all ease-in-out .5s;
 }
 
