@@ -290,3 +290,32 @@ page6.addEventListener("mouseenter", function(){
 }
 
 page6Animation()
+
+function page8Animation(){
+  let page7center = document.querySelector(".page7-center");
+let page7h2 = document.querySelector(".page7-center h2");
+let page7h3 = document.querySelector(".page7-center h3");
+
+page7center.addEventListener("mouseenter", function () {
+  page7h3.style.borderBottom = "1px solid #000";
+  page7h2.style.borderBottom = "none";
+
+  gsap.to(".page7-center h2, .page7-center h3", {
+    y: "-10vh",
+    duration: 0.5,
+  });
+});
+
+page7center.addEventListener("mouseleave", function () {
+  page7h3.style.borderBottom = "none";
+  page7h2.style.borderBottom = "1px solid #000";
+
+  gsap.to(".page7-center h2, .page7-center h3", {
+    y: "0vh",
+    duration: 0.5,
+  });
+});
+}
+
+page8Animation()
+

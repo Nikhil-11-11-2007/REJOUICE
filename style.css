@@ -579,30 +579,26 @@ nav > h4{
 
 .page7-center{
     width: 34.16vw;
-    height: 12vh;
+    height: 10vh;
     position: relative;
-    text-align: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     overflow: hidden;
 }
 
 .page7-center h2{
+    width: fit-content;
     font-family: "rejouice";
-    font-size: 5rem;
+    font-size: 3.3rem;
+    border-bottom: 1px solid #000;
 }
 
 .page7-center h3{
+    width: fit-content;
     font-family: "rejouice";
-    top: 10vh;
-    font-size: 5rem;
+    font-size: 3.3rem;
 }
-
-.page7-center:hover h2{
-    margin-top: -13vh;
-    transition: all ease-in-out .5s;
-}
-
 
 .page8{
     height: 100vh;
