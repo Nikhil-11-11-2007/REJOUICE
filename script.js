@@ -291,7 +291,7 @@ page6.addEventListener("mouseenter", function(){
 
 page6Animation()
 
-function page8Animation(){
+function page7Animation(){
   let page7center = document.querySelector(".page7-center");
 let page7h2 = document.querySelector(".page7-center h2");
 let page7h3 = document.querySelector(".page7-center h3");
@@ -317,5 +317,5 @@ page7center.addEventListener("mouseleave", function () {
 });
 }
 
-page8Animation()
+page7Animation()
 
