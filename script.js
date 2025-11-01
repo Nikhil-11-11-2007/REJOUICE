@@ -272,7 +272,6 @@ function page6Animation(){
   let page6 = document.querySelector(".page6")
 let page6cont = document.querySelector(".page6-cont")
 
-page6.addEventListener("mouseenter", function(){
   gsap.to(page6cont,{
     scale: 1,
     duration: 10,
@@ -280,13 +279,11 @@ page6.addEventListener("mouseenter", function(){
     scrollTrigger:{
       trigger:".page6 .page6-cont",
       scroller: "#main",
-      // markers:true,
       start: "top 80%",
       end: "top 20%",
       scrub:true
     }
   })
-})
 }
 
 page6Animation()
@@ -319,3 +316,58 @@ page7center.addEventListener("mouseleave", function () {
 
 page7Animation()
 
+function page8Animation(){
+  let page8h1 = document.querySelector(".page8-bottom h1");
+
+let page8 = document.querySelector(".page8")
+
+let splith1 =  page8h1.textContent.split("")
+
+let clutt = ""
+
+let splitttt = splith1.forEach(function(dett){
+  clutt += `<span>${dett}</span>`
+})
+
+page8h1.innerHTML = clutt
+
+  gsap.from(".page8-bottom h1 span",{
+    y: -100,
+    duration: .5,
+    opacity: 0,
+    stagger: .14,
+    scrollTrigger: {
+      trigger: ".page8",
+      scroller: "#main",
+      start: "top 70%",
+      end: "top 75%"
+    }
+  })
+}
+
+page8Animation()
+
+gsap.to("nav", {
+  color: "black",
+  scrollTrigger: {
+    trigger: ".page5",
+    scroller: "#main",
+    start: "top 5%",
+    endTrigger: ".page7", 
+    end: "bottom 5%",
+    markers: true,
+    scrub: true,           
+  }
+});
+
+gsap.to("nav", {
+  color: "white",
+  scrollTrigger: {
+    trigger: ".page8",
+    scroller: "#main",
+    start: "top 5%",
+    end: "bottom 5%",
+    markers: true,
+    scrub: true,
+  }
+});

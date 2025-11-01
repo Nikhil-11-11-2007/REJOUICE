@@ -610,7 +610,6 @@ nav > h4{
 
 .page8-top{
     height: 37vh;
-    /* background-color: darkgreen; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -704,5 +703,6 @@ input {
 
 .page8-bottom h1{
     text-align: center;
+    overflow: hidden;
     font-size: 24.5vw;
 }
