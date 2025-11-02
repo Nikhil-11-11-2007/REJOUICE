@@ -347,7 +347,8 @@ page8h1.innerHTML = clutt
 
 page8Animation()
 
-gsap.to("nav", {
+function navAnimation(){
+  gsap.to("nav", {
   color: "black",
   scrollTrigger: {
     trigger: ".page5",
@@ -355,7 +356,6 @@ gsap.to("nav", {
     start: "top 5%",
     endTrigger: ".page7", 
     end: "bottom 5%",
-    markers: true,
     scrub: true,           
   }
 });
@@ -367,7 +367,22 @@ gsap.to("nav", {
     scroller: "#main",
     start: "top 5%",
     end: "bottom 5%",
-    markers: true,
     scrub: true,
   }
 });
+
+
+gsap.to(".nav-txt h2, .nav-txt h3",{
+  transform:`translateY(-100%)`,
+  scrollTrigger:{
+    trigger:".page1",
+    scroller:"#main",
+    start: "top -50%",
+    end: "top -55%",
+    markers:true,
+    scrub:.9,
+  }
+})
+}
+
+navAnimation()

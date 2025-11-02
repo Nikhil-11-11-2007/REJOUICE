@@ -96,7 +96,18 @@ nav{
     color: #ffffff;
 }
 
-nav h3{
+nav .nav-txt{
+    height: 2.5vh;
+    width: 12rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.nav-txt h2{
+    font-size: .9vw; 
+}
+
+.nav-txt h3{
     font-size: .9vw;
 }
 
