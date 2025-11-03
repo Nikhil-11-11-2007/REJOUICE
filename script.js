@@ -118,90 +118,78 @@ stunningWords()
 
 function boxcursorAnimation(){
   let container1 = document.querySelector(".container1")
-let boxCursor = document.querySelector("#box-cursor")
-let boxh5 = document.querySelector("#box-cursor h5")
-
 container1.addEventListener("mousemove", function(detail){
   let rectt = container1.getBoundingClientRect()
-  gsap.to(boxCursor,{
+  gsap.to("#box-cursor",{
     x: detail.clientX - rectt.left,
     y: detail.clientY - rectt.top
   })
-
-  gsap.to(boxh5,{
-    x: detail.clientX - rectt.left - "0vw",
-    y: detail.clientY - rectt.top -  "0vw"
-  })
 })
-
 container1.addEventListener("mouseenter", function(){
-  gsap.to(boxCursor, {
-    scale: 1,
-    opacity: 1
-  });
-
-  gsap.to(boxh5, {
+  gsap.to("#box-cursor, #box-cursor h5", {
     scale: 1,
     opacity: 1
   });
 });
-
 container1.addEventListener("mouseleave", function(){
-  gsap.to(boxCursor, {
-    scale: 0,
-    opacity: 0
-  });
-
-  gsap.to(boxh5, {
+  gsap.to("#box-cursor, #box-cursor h5", {
     scale: 0,
     opacity: 0
   });
 });
+gsap.to("#box-cursor",{
+  scale: 1,
+  x:"5rem",
+  y:"10rem",
+  opacity: 1,
+  scrollTrigger:{
+    trigger:".container1",
+    scroller:"#main",
+    start:"top 30%",
+    end:"bottom 0%",
+    toggleActions: "play reverse play reverse"
+  }
+})
 }
 
 boxcursorAnimation()
 
 function box2cursorAnimation(){
   let imgLeft = document.querySelector("#img-left")
-let box2Cursor = document.querySelector("#box2-cursor")
-let box2h5 = document.querySelector("#box2-cursor h5")
-
 imgLeft.addEventListener("mousemove", function(Detail){
   let recT = imgLeft.getBoundingClientRect()
-  gsap.to(box2Cursor,{
+  gsap.to("#box2-cursor",{
     x: Detail.clientX - recT.left,
     y: Detail.clientY - recT.top
   })
+})
+imgLeft.addEventListener("mouseenter", function(){
+  gsap.to("#box2-cursor, #box2-cursor h5", {
+    scale: 1,
+    opacity: 1
+  });
 
-  gsap.to(box2h5,{
-    x: Detail.clientX - recT.left - "0vw",
-    y: Detail.clientY - recT.top -  "0vw"
-  })
+});
+imgLeft.addEventListener("mouseleave", function(){
+  gsap.to("#box2-cursor, #box2-cursor h5", {
+    scale: 0,
+    opacity: 0
+  });
+});
+gsap.to("#box2-cursor",{
+  scale: 1,
+  x:"5rem",
+  y:"10rem",
+  opacity: 1,
+  scrollTrigger:{
+    trigger:"#img-left",
+    scroller:"#main",
+    start:"top 30%",
+    end:"bottom 0%",
+    toggleActions: "play reverse play reverse"
+  }
 })
 
-imgLeft.addEventListener("mouseenter", function(){
-  gsap.to(box2Cursor, {
-    scale: 1,
-    opacity: 1
-  });
-
-  gsap.to(box2h5, {
-    scale: 1,
-    opacity: 1
-  });
-});
-
-imgLeft.addEventListener("mouseleave", function(){
-  gsap.to(box2Cursor, {
-    scale: 0,
-    opacity: 0
-  });
-
-  gsap.to(box2h5, {
-    scale: 0,
-    opacity: 0
-  });
-});
 }
 
 box2cursorAnimation()
@@ -209,41 +197,21 @@ box2cursorAnimation()
 
 function box3cursorAnimation(){
   let imgRight = document.querySelector("#img-right")
-let box3Cursor = document.querySelector("#box3-cursor")
-let box3h5 = document.querySelector("#box3-cursor h5")
-
 imgRight.addEventListener("mousemove", function(Detail){
   let recT = imgRight.getBoundingClientRect()
-  gsap.to(box3Cursor,{
+  gsap.to("#box3-cursor",{
     x: Detail.clientX - recT.left,
     y: Detail.clientY - recT.top
   })
-
-  gsap.to(box3h5,{
-    x: Detail.clientX - recT.left - "0vw",
-    y: Detail.clientY - recT.top -  "0vw"
-  })
 })
-
 imgRight.addEventListener("mouseenter", function(){
-  gsap.to(box3Cursor, {
-    scale: 1,
-    opacity: 1
-  });
-
-  gsap.to(box3h5, {
+  gsap.to("#box3-cursor, #box3-cursor h5", {
     scale: 1,
     opacity: 1
   });
 });
-
 imgRight.addEventListener("mouseleave", function(){
-  gsap.to(box3Cursor, {
-    scale: 0,
-    opacity: 0
-  });
-
-  gsap.to(box3h5, {
+  gsap.to("#box3-cursor, #box3-cursor h5", {
     scale: 0,
     opacity: 0
   });
@@ -379,10 +347,27 @@ gsap.to(".nav-txt h2, .nav-txt h3",{
     scroller:"#main",
     start: "top -50%",
     end: "top -55%",
-    markers:true,
     scrub:.9,
   }
 })
 }
 
 navAnimation()
+
+let cursorh5 = document.querySelector(".page2")
+let playvideo = document.querySelector(".play-video")
+cursorh5.addEventListener("click", function(){
+  gsap.to(".video-div", {
+    scale: 1,
+    duration: .6,
+    display: "block"
+  })
+})
+
+playvideo.addEventListener("click", function(){
+  gsap.to(".video-div", {
+    scale: 0,
+    duration: .6,
+    display: "none"
+  })
+})
