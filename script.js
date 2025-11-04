@@ -354,20 +354,41 @@ gsap.to(".nav-txt h2, .nav-txt h3",{
 
 navAnimation()
 
-let cursorh5 = document.querySelector(".page2")
+function videoAnimation(){
+  let cursorh5 = document.querySelector(".page2")
 let playvideo = document.querySelector(".play-video")
+
+let cursorr = document.querySelector("#cursorr")
+let videodiv = document.querySelector(".video-div")
+
+videodiv.addEventListener("mousemove", function(des){
+    let rectts = videodiv.getBoundingClientRect();
+
+    gsap.to(cursorr, {
+        x: des.clientX - rectts.left,
+        y: des.clientY - rectts.top
+    });
+});
+
 cursorh5.addEventListener("click", function(){
   gsap.to(".video-div", {
+    rotate: 0,
     scale: 1,
     duration: .6,
-    display: "block"
+    display: "block",
   })
+   
+  playvideo.play()
 })
 
-playvideo.addEventListener("click", function(){
+cursorr.addEventListener("click", function(){
   gsap.to(".video-div", {
     scale: 0,
     duration: .6,
     display: "none"
   })
+  playvideo.pause()
 })
+}
+
+videoAnimation()

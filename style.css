@@ -223,15 +223,37 @@ nav .nav-txt{
     background-color: rgb(0, 0, 0);
     padding: 2rem;
     scale: 0;
-    position: fixed;
+    position: relative;
     z-index: 99;
     display: none;
 }
 
 .video-div .play-video{
-    /* display: none; */
     height: 100%;
     width: 100%;
+}
+
+#cursorr{
+    position: fixed;
+    transform: translate(-50%,50%);
+    z-index: 3;
+    top: 0;
+    display: flex;
+    scale: 1;
+    gap: 1vw;
+    z-index: 999;
+}
+
+#cursorr i{
+    font-size: 1.3vw;
+    color: #312f2f97;
+}
+
+#cursorr h5{
+    font-size: 1.3vw;
+    font-weight: 300;
+    font-family: "rejo";
+    color: #312f2f97;
 }
 
 .page2 video{
