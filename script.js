@@ -341,7 +341,7 @@ gsap.to("nav", {
 
 
 gsap.to(".nav-txt h2, .nav-txt h3",{
-  transform:`translateY(-100%)`,
+  transform:`translateY(-90%)`,
   scrollTrigger:{
     trigger:".page1",
     scroller:"#main",
@@ -355,7 +355,7 @@ gsap.to(".nav-txt h2, .nav-txt h3",{
 navAnimation()
 
 function videoAnimation(){
-  let cursorh5 = document.querySelector(".page2")
+  let Page2 = document.querySelector(".page2")
 let playvideo = document.querySelector(".play-video")
 
 let cursorr = document.querySelector("#cursorr")
@@ -370,7 +370,7 @@ videodiv.addEventListener("mousemove", function(des){
     });
 });
 
-cursorh5.addEventListener("click", function(){
+Page2.addEventListener("click", function(){
   gsap.to(".video-div", {
     rotate: 0,
     scale: 1,
