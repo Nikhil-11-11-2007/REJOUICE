@@ -108,7 +108,7 @@ h1.innerHTML = clutr
 
 gsap.from("h1 span", {
   y:-60,
-  duration: .5,
+  duration: .9,
   opacity: 0,
   stagger: .1
 })
