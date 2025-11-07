@@ -341,7 +341,7 @@ gsap.to("nav", {
 
 
 gsap.to(".nav-txt h2, .nav-txt h3",{
-  transform:`translateY(-90%)`,
+  transform:`translateY(-100%)`,
   scrollTrigger:{
     trigger:".page1",
     scroller:"#main",
@@ -379,6 +379,15 @@ Page2.addEventListener("click", function(){
   })
    
   playvideo.play()
+})
+
+videodiv.addEventListener("click", function(){
+  gsap.to(".video-div", {
+    scale: 0,
+    duration: .6,
+    display: "none"
+  })
+  playvideo.pause()
 })
 
 cursorr.addEventListener("click", function(){

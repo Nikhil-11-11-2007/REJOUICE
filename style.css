@@ -35,7 +35,6 @@ html{
 .page1{
     height: 90vh;
     width: 100%;
-    /* background-color: pink; */
     position: relative;
 }
 
@@ -103,8 +102,8 @@ nav button{
 }
 
 nav .nav-txt{
-    height: 2.5vh;
-    width: 12rem;
+    height: 2vh;
+    width: 12vw;
     text-align: center;
     overflow: hidden;
 }
@@ -197,6 +196,10 @@ nav .nav-txt{
     position: relative;
 }
 
+.play-rel{
+    display: none;
+}
+
 .page2>h1{
     position: relative;
     width: fit-content;
@@ -223,14 +226,22 @@ nav .nav-txt{
     width: 100%;
 }
 
-.video-div{
+.video-div {
     height: 100vh;
     width: 100%;
     background-color: rgb(0, 0, 0);
     padding: 2rem;
     scale: 0;
-    position: relative;
-    z-index: 99;
+    position: fixed;   /* ✅ relative → fixed */
+    top: 0;            /* ✅ ensure full screen overlay */
+    left: 0;
+    z-index: 999;      /* ✅ top of everything */
+    display: none;
+    transform-origin: center; /* ✅ GSAP animation center se ho */
+}
+
+
+.video-div>i{
     display: none;
 }
 
@@ -858,6 +869,7 @@ input {
 
 nav .nav-txt{
     height: 3vh;
+    width: 50%;
     text-align: left;
 }
 
@@ -914,5 +926,56 @@ nav button{
     font-size: 1rem;
     font-family: "rejou";
 }
+
+.page2>h1{
+    font-size: 16vw;
+    border-bottom: 3px solid #fff;
+}
+
+.play-rel{
+    position: absolute;
+    bottom: 4vw;
+    left: 2vw;
+    width: 22%;
+    display: block;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 7;
+}
+
+.play-rel h2{
+    font-size: 1.1rem;
+    font-family: "rejo";
+    font-weight: 400;
+}
+
+.video-div{
+    padding: 1rem;
+}
+
+.video-div>i{
+    font-weight: 100;
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.page3 .para{
+    height: 30vh;
+    font-size: 0rem;
+}
+
+.page3 .para p{
+    font-size: 1.7rem;
+    font-family: "rejou";
+    font-weight: 100;
+}
+
+.para .word0 p{
+    text-indent: 0vw;
+}
+
 
 }
