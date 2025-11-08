@@ -82,8 +82,8 @@ gsap.from(".page3 span p ", {
   scrollTrigger: {
     trigger: ".page3",
     scroller: "#main",
-    start: "top 55%",
-    end: "top 45%",
+    start: "top 65%",
+    end: "top 75%",
     scrub: 2
   }
 });
@@ -107,7 +107,7 @@ splitted.forEach(function(el){
 h1.innerHTML = clutr
 
 gsap.from("h1 span", {
-  y:-60,
+  y:-160,
   duration: .9,
   opacity: 0,
   stagger: .1

@@ -89,7 +89,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 2.5vw;
-    background-color: transparent;
+    background-color: #000000;
     text-transform: capitalize;
     font-family: "rejou";
     position: fixed;
@@ -449,6 +449,10 @@ nav .nav-txt{
     overflow: hidden;
 }
 
+.main-container{
+    display: none;
+}
+
 
 .box1{
     height: 120vh;
@@ -607,11 +611,36 @@ nav .nav-txt{
     align-items: center;
     justify-content: space-between;
     padding: 12vh 2vw;
+    gap: 6vw;
 }
 
-.page5-top img{
-    height: 10%;
+.page5-top .images-div{
+    height: 7vh;
     width: 10%;
+}
+
+.page5-top .images-div:nth-child(5){
+    height: 5vh;
+    width: 5%;
+}
+
+.page5-top .images-div:nth-child(4){
+    height: 5vh;
+    width: 6%;
+}
+
+.page5-top .images-div:nth-child(3){
+    height: 5vh;
+    width: 8%;
+}
+.page5-top .images-div:nth-child(2){
+    height: 5vh;
+    width: 8%;
+}
+
+.images-div img{
+    height: 100%;
+    width: 100%;
 }
 
 .page5-center{
@@ -962,9 +991,12 @@ nav button{
     color: #fff;
 }
 
+.page3{
+    min-height: 90vh;
+}
+
 .page3 .para{
     height: 30vh;
-    font-size: 0rem;
 }
 
 .page3 .para p{
@@ -977,5 +1009,97 @@ nav button{
     text-indent: 0vw;
 }
 
+.page3 .content{
+    margin-top: 4vh;
+    height: 35vh;
+}
+
+.page3 .content h3{
+    font-family: "rejou";
+    font-size: 4.1vw;
+    width: 30%;
+    opacity: .8;
+}
+
+.content #right{
+    overflow: hidden;
+}
+
+#right p{
+    font-size: 4vw;
+}
+
+#right span {
+    width: 100%;
+}
+
+#right #prgph{
+    margin-top: 3vw;
+}
+
+#right #btn{
+    margin-top: 1vh;
+    width: 55.5%;
+    margin-left: -2vw;
+}
+
+#right #btn h4{
+    font-family: "rejouice";
+    font-size: 4vw;
+    margin-left: -1vw;
+}
+
+.page4{
+    min-height: 70vh;
+}
+
+.page4 #highlight{
+    font-size: 4.2vw;
+}
+
+#butn{
+    width: 32%;
+}
+
+#butn h4{
+    font-size: 4vw;
+    margin-left: -2.9vw;
+}
+
+.page4 .container1{
+    display: none;
+}
+
+.page4 .container2{
+    display: none;
+}
+
+.main-container{
+    display: block;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 2vw;
+    overflow: auto;
+}
+
+.main-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.main-container .boxes{
+    height: 57vh;
+    width: 76%;
+    flex-shrink: 0;
+    border-radius: .5rem;
+}
+
+.main-container .boxes img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
 
 }
