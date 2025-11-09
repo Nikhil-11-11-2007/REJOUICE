@@ -315,7 +315,19 @@ page8h1.innerHTML = clutt
 
 page8Animation()
 
+
 function navAnimation(){
+gsap.to("nav",{
+  background: "none",
+  scrollTrigger:{
+    trigger:".page1",
+    scroller:"#main",
+    start: "top -5%",
+    end: "top -5%",
+    scrub:.9,
+  }
+})
+
   gsap.to("nav", {
   color: "black",
   scrollTrigger: {
