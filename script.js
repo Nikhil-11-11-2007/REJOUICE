@@ -413,3 +413,14 @@ cursorr.addEventListener("click", function(){
 }
 
 videoAnimation()
+
+function movingAnimation(){
+  gsap.to(".moving-div", {
+  x: "-50%",
+  duration: 33,
+  ease: "none",
+  repeat: -1
+});
+}
+
+movingAnimation()
