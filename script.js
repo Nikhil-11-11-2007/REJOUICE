@@ -424,3 +424,27 @@ function movingAnimation(){
 }
 
 movingAnimation()
+
+function swiper2Animation() {
+  var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: "auto",
+    spaceBetween: 8,
+    loop: true,
+    freeMode: {
+      enabled: false,
+      sticky: true,
+      momentumBounce: false,
+    },
+    speed: 2000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    allowTouchMove: true, // enable manual scroll
+    grabCursor: true,
+  });
+}
+
+swiper2Animation();
+
+
