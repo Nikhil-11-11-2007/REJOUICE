@@ -891,7 +891,9 @@ input {
     color: #fff;
     overflow: hidden;
 }
-
+.page8-bottom h1 span{
+    display: inline-block;
+}
 .page8-bottom h1{
     text-align: center;
     overflow: hidden;
@@ -1161,7 +1163,6 @@ nav button{
 }
 
 .swiper2{
-    background-color: darkblue;
     width: 100%;
     height: 100%;
 }
@@ -1171,7 +1172,6 @@ nav button{
 }
 
 .swiper-slide {
-    background-color: darkcyan;
     width: 69vw !important;
     height: fit-content;
     display: flex;
@@ -1189,5 +1189,47 @@ nav button{
     margin-left: auto;
     margin-right: auto;
 }
+
+.page6-top{
+    padding-top: 10vw;
+    margin-bottom: 2vw;
+}
+
+.page6-top h1{
+    font-size: 2rem;
+    font-family: "rejou";
+    margin-bottom: 10vw;
+}
+
+.page6-content{
+    height: 29vh;
+    padding: 2vh 1vw;
+}
+
+.page6-content:nth-child(3){
+    height: 38vh;
+    border-bottom: 1px solid #4444;
+    padding: 2vh 1vw;
+}
+
+.page6-text h2{
+    font-size: 1.1rem;
+    line-height: 1;
+    font-family: "rejouice";
+    width: 60%;
+}
+
+.para-div p{
+    font-size: 1.05rem;
+    font-family: "rejouice";
+    width: 90%;
+}
+
+.page6-cont{
+    margin-top: 3vh;
+    height: 35vh;
+    padding: 0vw 1vw;
+}
+
 
 }

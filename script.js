@@ -287,8 +287,6 @@ page7Animation()
 function page8Animation(){
   let page8h1 = document.querySelector(".page8-bottom h1");
 
-let page8 = document.querySelector(".page8")
-
 let splith1 =  page8h1.textContent.split("")
 
 let clutt = ""
@@ -301,9 +299,9 @@ page8h1.innerHTML = clutt
 
   gsap.from(".page8-bottom h1 span",{
     y: -100,
-    duration: .5,
+    duration: .7,
     opacity: 0,
-    stagger: .14,
+    stagger: .1,
     scrollTrigger: {
       trigger: ".page8",
       scroller: "#main",
