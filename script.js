@@ -298,7 +298,7 @@ let splitttt = splith1.forEach(function(dett){
 page8h1.innerHTML = clutt
 
   gsap.from(".page8-bottom h1 span",{
-    y: -100,
+    y: -80,
     duration: .7,
     opacity: 0,
     stagger: .1,
