@@ -28,10 +28,6 @@ html,body{
     width: 100%;
 }
 
-html{
-    font-size: clamp(14px,1vw,20px);
-}
-
 .page1{
     height: 90vh;
     width: 100%;
@@ -95,6 +91,11 @@ nav{
     position: fixed;
     z-index: 9;
     color: #ffffff;
+    mix-blend-mode: difference;
+}
+
+.menu-div{
+    display: none;
 }
 
 nav button{
@@ -977,7 +978,7 @@ nav button{
     position: absolute;
     bottom: 4vw;
     left: 2vw;
-    width: 22%;
+    width: 25%;
     display: block;
     display: flex;
     color: white;
@@ -1311,6 +1312,36 @@ nav button{
 .page8-bottom h1{
     font-size: 24vw;
     margin-top: -2vh;
+}
+
+.menu-div{
+    display: block;
+    height: 90vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    /* top: 0vh; */
+    bottom: 100vh;
+    left: 0;
+    z-index: 20;
+}
+
+.menu-div h4{
+    margin: 7vh 2vw;
+}
+
+.Menu-center h2 span{
+    font-family: "rejouice";
+    text-transform: capitalize;
+    margin: 0 2vw;
+    font-size: 15vw;
+    line-height: 1;
+}
+
+.social{
+    margin-top: 22vh;
+    margin-left: 2vw;
 }
 
 }

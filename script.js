@@ -322,7 +322,7 @@ gsap.to("nav",{
     scroller:"#main",
     start: "top -5%",
     end: "top -5%",
-    scrub:.9,
+    scrub:.3,
   }
 })
 
