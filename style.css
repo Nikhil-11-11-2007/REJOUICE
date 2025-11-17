@@ -91,7 +91,6 @@ nav{
     position: fixed;
     z-index: 9;
     color: #ffffff;
-    mix-blend-mode: difference;
 }
 
 .menu-div{
@@ -904,9 +903,11 @@ input {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     nav{
     padding: 1.5rem .6rem;
+    z-index: 99;
+    background-color: #000;
 }
 
 nav .nav-txt{
@@ -931,16 +932,24 @@ nav .nav-txt{
     display: none;
 }
 
-nav button{
-    display: block;
-    font-family: "rejo";
-    border: none;
-    background-color: #ffffff1f;
-    color: #fff;
-    font-weight: 400;
-    padding: .6rem 1.2rem;
+nav #menu-btn{
+    padding-top: 1vh;
+    height: 5vh;
+    width: 18vw;
+    background-color: #ffffff9e;
+    display: flex;
+    align-items: center;
+    gap: 0vh;
+    flex-direction: column;
 }
 
+#menu-btn h4{
+    font-size: 4vw;
+}
+
+#menu-btn h5{
+    font-size: 4vw;
+}
 .page1-content{
     justify-content: space-between;
 }
@@ -1308,10 +1317,11 @@ nav button{
 
 .page8-bottom{
     height: 25vh;
+    width: 100%;
 }
 .page8-bottom h1{
-    font-size: 24vw;
-    margin-top: -2vh;
+    font-size: calc(11vw + 3rem);
+    margin-top: 0vh;
 }
 
 .menu-div{
@@ -1321,8 +1331,7 @@ nav button{
     background-color: #000;
     color: #fff;
     position: fixed;
-    /* top: 0vh; */
-    bottom: 100vh;
+    top: -100vh;
     left: 0;
     z-index: 20;
 }
@@ -1331,11 +1340,16 @@ nav button{
     margin: 7vh 2vw;
 }
 
-.Menu-center h2 span{
+.Menu-center{
+    height: 42vh;
+    width: 100%;
+}
+
+.Menu-center h2 span {
     font-family: "rejouice";
     text-transform: capitalize;
     margin: 0 2vw;
-    font-size: 15vw;
+    font-size: calc(3vw + 3rem);
     line-height: 1;
 }
 
