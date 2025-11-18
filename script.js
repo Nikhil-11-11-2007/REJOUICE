@@ -445,9 +445,43 @@ function swiper2Animation() {
 
 swiper2Animation();
 
-let menubtn = document.querySelector("#menu-btn")
+function menuAnimation() {
+  let menubtn = document.querySelector("#menu-btn")
 let menuh4 = document.querySelector("#menu-btn h4");
 let menuh5 = document.querySelector("#menu-btn h5");
+let flag = 0
+menubtn.addEventListener("click", function() {
+  if(flag === 0){
+      gsap.to("#menu-btn h4, #menu-btn h5", {
+      y: "-4.5vh",
+      duration: 0.5,
+    });
+    gsap.to(".menu-div", {
+      y: "100vh",
+      ease: "power2.in",
+      duration: 1
+    })
+    menuh4.style.opacity = 0
+    menuh5.style.opacity = 1
+    flag = 1
+  }else{
+    gsap.to("#menu-btn h4, #menu-btn h5", {
+      y: "0vh",
+      duration: 0.5,
+    });
+    gsap.to(".menu-div", {
+      y: "0vh",
+      ease: "power2.in",
+      duration: 1
+    })
+    menuh4.style.opacity = 1
+    menuh5.style.opacity = 0
+    flag = 0
+  }
 
+})
+}
+
+menuAnimation()
 
 
