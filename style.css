@@ -119,7 +119,7 @@ nav .nav-txt{
 .h4-txt{
     position: relative;
     height: 2.2vh;
-    width: 5rem;
+    width: 5vw;
     display: inline-block;
     font-size: .9vw;
     overflow: hidden;
@@ -141,7 +141,7 @@ nav .nav-txt{
 }
 
 .h4-txt h4{
-    margin-left: -.6rem;
+    margin-left: -1vw;
     margin-bottom: .2rem;
     transition: all ease-out 0.5s;
     white-space: nowrap;
@@ -781,14 +781,14 @@ nav .nav-txt{
 .page7-center h2{
     width: fit-content;
     font-family: "rejouice";
-    font-size: 3.3rem;
+    font-size: 3.6vw;
     border-bottom: 1px solid #000;
 }
 
 .page7-center h3{
     width: fit-content;
     font-family: "rejouice";
-    font-size: 3.3rem;
+    font-size: 3.6vw;
 }
 
 .page8{
@@ -908,7 +908,20 @@ input {
     background-color: #fff;
     position: fixed;
     top: 0;
-    z-index: 50;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3vw;
+}
+.loader h3{
+    font-size: 1.4vw;
+}
+.loader h3 sup{
+    font-size: .8vw;
+    font-family: "rejo";
+    font-weight: 700;
 }
 
 @media (max-width: 1100px) {
@@ -1365,6 +1378,13 @@ nav #menu-btn{
 .social{
     margin-top: 22vh;
     margin-left: 2vw;
+}
+
+.loader h3{
+    font-size: calc(1.1rem + 1vw);
+}
+.loader h3 sup{
+    font-size: 2vw;
 }
 
 }

@@ -484,4 +484,30 @@ menubtn.addEventListener("click", function() {
 
 menuAnimation()
 
+function loaderAnimation() {
+  let tl = gsap.timeline()
 
+tl.from(".loader h3", {
+  x: 30,
+  opacity: 0,
+  duration: .8,
+  stagger: .1
+})
+
+tl.to(".loader h3", {
+  x: -10,
+  opacity: 0,
+  duration: .8,
+  stagger: .1
+})
+
+tl.to(".loader", {
+  opacity: 0
+})
+
+tl.to(".loader", {
+  display: "none"
+})
+}
+
+loaderAnimation()
