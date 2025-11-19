@@ -933,7 +933,7 @@ input {
 
 nav .nav-txt{
     height: 3vh;
-    width: 50%;
+    width: 53%;
     text-align: left;
 }
 
@@ -943,6 +943,7 @@ nav .nav-txt{
 
 .nav-txt h3{
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 .h4-txt{
@@ -1236,23 +1237,23 @@ nav #menu-btn{
 
 .page6-content{
     height: 29vh;
-    padding: 2vh 1vw;
+    padding: 1vh 1vw;
 }
 
 .page6-content:nth-child(3){
-    height: 38vh;
-    padding: 2vh 1vw;
+    height: 35vh;
+    padding: 1vh 1vw;
 }
 
 .page6-text h2{
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1;
     font-family: "rejouice";
     width: 60%;
 }
 
 .para-div p{
-    font-size: 1.05rem;
+    font-size: .9rem;
     font-family: "rejouice";
     width: 90%;
 }
