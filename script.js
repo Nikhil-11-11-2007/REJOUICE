@@ -31,6 +31,34 @@ ScrollTrigger.refresh();
 }
 locomotiveAnimation()
 
+function loaderAnimation() {
+  let tl = gsap.timeline()
+
+tl.from(".loader h3", {
+  x: 30,
+  opacity: 0,
+  duration: .8,
+  stagger: .1
+})
+
+tl.to(".loader h3", {
+  x: -10,
+  opacity: 0,
+  duration: .8,
+  stagger: .1
+})
+
+tl.to(".loader", {
+  opacity: 0
+})
+
+tl.to(".loader", {
+  display: "none"
+})
+}
+
+loaderAnimation()
+
 function cursorAnimation(){
 let cursor = document.querySelector("#cursor")
 let page2 = document.querySelector(".page2")
@@ -108,6 +136,7 @@ h1.innerHTML = clutr
 
 gsap.from("h1 span", {
   y:-160,
+  delay:2,
   duration: .9,
   opacity: 0,
   stagger: .1
@@ -483,31 +512,3 @@ menubtn.addEventListener("click", function() {
 }
 
 menuAnimation()
-
-function loaderAnimation() {
-  let tl = gsap.timeline()
-
-tl.from(".loader h3", {
-  x: 30,
-  opacity: 0,
-  duration: .8,
-  stagger: .1
-})
-
-tl.to(".loader h3", {
-  x: -10,
-  opacity: 0,
-  duration: .8,
-  stagger: .1
-})
-
-tl.to(".loader", {
-  opacity: 0
-})
-
-tl.to(".loader", {
-  display: "none"
-})
-}
-
-loaderAnimation()
